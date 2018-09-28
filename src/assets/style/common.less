@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+// 字体颜色
+@font-color-fff: #fff; //
+@font-color-000: #000; //
+@font-color-fff: #fff; //
+@font-color-fff: #fff; //
+@font-color-999: #999; //
+@font-color-ff4c4c: #ff4c4c; //
+@font-color-ef5447: #fefefe; //
+@font-color-ef5447: #424954; //
+@font-color-ef5447: #989898; //
+@font-color-ef5447: #fe523a; //
+@font-color-ef5447: #ff7323; //
+@font-color-ff533b: #ff533b; //
+@font-color-ff533b: #f3f3f3; //
+@font-color-ff533b: #e5e5e5; //
+@font-color-ff533b: #5998f8; //
+@font-color-ff533b: #ff7b35; //
+
+// 字体大小
+@font-12: 12px;
+@font-24: 24px;
+@font-26: 26px;
+@font-28: 28px;
+@font-30: 30px;
+@font-32: 32px;
+@font-34: 34px;
+@font-36: 36px;
+@font-40: 40px;
+@font-48: 48px;
+@font-64: 64px;
+@font-70: 70px;
+@font-82: 82px;
+@font-130: 130px;
+
+// 边框颜色
+@border-color-000: #000;
+@border-color-fff: #fff;
+@border-color-999: #999;
+@border-color-e5e5e5: #e5e5e5;
+@border-color-b5b5b5: #b5b5b5;
+@border-color-f8a741: #f8a741;
+@border-color-f1f1f1: #f1f1f1;
+@border-color-2a84f8: #2a84f8;
+
+// 边框大小
+@border-size-4: 4px;
+@border-size-1: 1px;
+
+// 背景颜色
+@background-color-fff: #fff;
+@background-color-999: #999;
+@background-color-f5f5f5: #f5f5f5;
+@background-color-fd6255: #fd6255;
+@background-color-f8f8f8: #f8f8f8;
+@background-color-fe7756: #fe7756;
+@background-color-f94836: #f94836;
+// sdk
+@background-color-f0f0f0: #f0f0f0;
+@background-color-f1f1f1: #f1f1f1;
+@background-color-f5f6f8: #f5f6f8;
+@background-color-2a84f8: #2a84f8;
+@background-color-c9e6ff: #c9e6ff;
+@background-color-ff4c4c: #ff4c4c;
+@background-color-e5e5e5: #e5e5e5;
+@background-color-fdef49: #fdef49;
+
+// margin和padding
+
+@mp-10: 10px;
+@mp-15: 15px;
+@mp-18: 18px;
+@mp-20: 20px;
+@mp-30: 30px;
+@mp-35: 35px;
+@mp-40: 40px;
+@mp-50: 50px;
+@mp-60: 60px;
+@mp-70: 70px;
+@mp-80: 80px;
+@mp-100: 100px;
+@mp-170: 170px;
+@mp-180: 180px;
+
+// 公共样式
+body {
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif, Tahoma;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.body {
+  background: @background-color-f5f6f8;
+}
+input {
+  background: none;
+  border: 0;
+  outline: none;
+  font-size: @font-30;
+}
+img{
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  margin: 90px 0;
+}
+.bg_com {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  background: @background-color-f5f5f5;
+  margin-bottom: 0;
+}
+.white {
+  background: @background-color-fff;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.form-box{
+  margin-bottom: @mp-60;
+}
+.form-box .form-item{
+  height: 120px;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px solid @border-color-e5e5e5;
+  display: flex;
+  align-items: center;
+  font-size: @font-30;
+}
+.form-box .form-item .right{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  color: @background-color-fd6255;
+}
+.form-box .form-item span{
+  margin: 0 40px;
+  width: 150px;
+}
+.form-box .form-item img{
+  width: 30px;
+  height: 30px;
+  margin: 0 40px;
+}
+
+.triangle_r {
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid @border-color-000;
+  border-bottom: 2px solid @border-color-000;
+  transform: rotate(-135deg);
+}
+
+.common-btn{
+  background: @font-color-fd6255;
+  color: @font-color-fff;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  width: 690px;
+  margin: 0 auto;
+  font-size: 32px;
+  border-radius: 50px;
+}
+
+
+// sdk
+
+.btn {
+  display: block;
+  height: 90px;
+  line-height: 90px;
+  font-size: @font-34;
+  text-align: center;
+  color: @font-color-fff;
+  background: @background-color-2a84f8;
+}
+
+.tips_box {
+  display: flex;
+  height: 70px;
+  padding: 0 @mp-30;
+  align-items: center;
+  align-content: center;
+  font-size: @font-26;
+  color: @font-color-999;
+}
+
+.input_body {
+  font-size: @font-32;
+  color: @font-color-424954;
+  background: @background-color-fff;
+
+  .input_box {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 0 @mp-30;
+    height: 100px;
+    box-sizing: border-box;
+
+    .grid_pwd {
+      flex-basis: 180px;
+    }
+
+    .grid_flex {
+      flex: 1;
+    }
+
+    .grid_yzm {
+      font-size: @font-28;
+      color: @font-color-ff4c4c;
+    }
+
+    .grid {
+      flex: 1;
+    }
+
+    input {
+      width: 100%;
+      font-size: @font-32;
+    }
+
+    &:not(:last-child) {
+      border-bottom: @border-size-1 solid @border-color-e5e5e5;
+    }
+  }
+}
+
+.trangle_com {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-right: 3px solid @border-color-999;
+  border-bottom: 3px solid @border-color-999;
+}
+
+.trangle_right {
+  .trangle_com;
+  transform: rotate(-45deg);
+}
+
+.trangle_bottom {
+  .trangle_com;
+  transform: rotate(45deg);
+}
+
+.trangle_top {
+  .trangle_com;
+  transform: rotate(-135deg);
+}
+
+
+.checkbox {
+  display: inline;
+  label {
+    font-size: @font-24;
+    color: @font-color-999;
+
+    &::before {
+      position: relative;
+      top: 4px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-right: @mp-20;
+      content: '';
+      background: url('~@/assets/img/choose@3x.png') no-repeat;
+      background-size: contain;
+    }
+
+    &.active {
+      &::before {
+        position: relative;
+        top: 4px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: @mp-20;
+        content: '';
+        background: url('~@/assets/img/Checkthe@3x.png') no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+.remark_box {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  align-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 @mp-30;
+  color: @font-color-fff;
+}
+
+.webview {
+  width: 100%;
+  word-break: break-all;
+  word-wrap:break-word;
+}
+
+// 动画
+@keyframes animateWidth {
+  from {
+    width: 80%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-moz-keyframes animateWidth {
+  from {
+    width: 80%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes animateWidth {
+  from {
+    width: 80%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-o-keyframes animateWidth {
+  from {
+    width: 80%;
+  }
+  to {
+    width: 100%;
+  }
+}
