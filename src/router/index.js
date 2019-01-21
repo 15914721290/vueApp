@@ -12,6 +12,10 @@ const router = new Router({
     path: '/',
     name: 'index',
     component: _import('iframe/index')
+  }, {
+    path: '/success',
+    name: 'success',
+    component: _import('success/index')
   }]
 })
 

@@ -7,7 +7,8 @@
 
 <script>
 import NavTop from '@/components/navTop'
-
+import { mapMutations } from 'vuex'
+import Lstorage from 'store'
 export default {
   data () {
     return {
@@ -19,6 +20,9 @@ export default {
   components: {
     NavTop
   },
+  methods: {
+    ...mapMutations(['USER_INFO', 'SIDN_DATA'])
+  },
   computed: {
     clientHeight () {
       return document.documentElement.clientHeight || document.body.clientHeight
@@ -28,6 +32,9 @@ export default {
     }
   },
   created () {
+    this.USER_INFO({islogin: true})
+    Lstorage.set('USER_INFO', JSON.stringify({islogin: true}))
+    console.log('this.USER_INFO', this.USER_INFO)
   }
 }
 </script>
