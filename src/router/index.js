@@ -8,13 +8,11 @@ Vue.use(Router)
 const router = new Router({
   mode: 'history',
   fallback: true,
-  routes: [
-    {
-      path: '/licence',
-      name: 'licence',
-      component: _import('licence/index')
-    }
-  ]
+  routes: [{
+    path: '/',
+    name: 'index',
+    component: _import('iframe/index')
+  }]
 })
 
 // router.beforeEach((to, from, next) => {

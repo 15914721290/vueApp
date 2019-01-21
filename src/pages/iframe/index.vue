@@ -2,6 +2,7 @@
   .iframe
     NavTop(:goBackParams="goBackParams")
     iframe(:style="'height:'+clientHeight+'px'" ref="iframeDom" id="iframe" name="iframe" frameborder="0" scrolling="auto" :src="src")
+    .box 首页
 </template>
 
 <script>
@@ -11,7 +12,7 @@ export default {
   data () {
     return {
       goBackParams: {
-        title: this.$route.params.name
+        title: '首页'
       }
     }
   },
