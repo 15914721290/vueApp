@@ -7,7 +7,7 @@
 
 <script>
 import NavTop from '@/components/navTop'
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 import Lstorage from 'store'
 export default {
   data () {
@@ -29,12 +29,13 @@ export default {
     },
     src () {
       return this.$route.params.url
-    }
+    },
+    ...mapState(['userInfoData'])
   },
   created () {
     this.USER_INFO({islogin: true})
     Lstorage.set('USER_INFO', JSON.stringify({islogin: true}))
-    console.log('this.USER_INFO', this.USER_INFO)
+    console.log('this.userInfoData', this.userInfoData)
   }
 }
 </script>
