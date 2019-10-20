@@ -1,12 +1,17 @@
-<template lang="pug">
-  .iframe
-    NavTop(:goBackParams="goBackParams")
-    iframe(:style="'height:'+clientHeight+'px'" ref="iframeDom" id="iframe" name="iframe" frameborder="0" scrolling="auto" :src="src")
-    .box 首页
+<template lang="html">
+  <div class="iframe">
+    <NavTop :goBackParams="goBackParams"/>
+    <Swiper :swiperSlides="swiperSlides"/>
+    <NavBottom/>
+  </div>
 </template>
+
+
 
 <script>
 import NavTop from '@/components/navTop'
+import NavBottom from '@/components/navBottom'
+import Swiper from '@/components/credit/swiper'
 import { mapMutations, mapState } from 'vuex'
 import Lstorage from 'store'
 export default {
@@ -14,11 +19,27 @@ export default {
     return {
       goBackParams: {
         title: '首页'
-      }
+      },
+      swiperSlides: [
+        {
+          img:require('../../assets/img//banner-a.jpg'),
+          link:'www.baidu.com'
+        },
+        {
+          img:require('../../assets/img//banner-b.jpg'),
+          link:'www.jingdo.com'
+        },
+        {
+          img:require('../../assets/img//banner-c.jpg'),
+          link:'www.baidu.com'
+        }
+      ]
     }
   },
   components: {
-    NavTop
+    NavTop,
+    NavBottom,
+    Swiper
   },
   methods: {
     ...mapMutations(['USER_INFO', 'SIDN_DATA'])
@@ -41,8 +62,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-iframe {
-  margin-top: 90px;
-  width: 100%;
-}
+
 </style>

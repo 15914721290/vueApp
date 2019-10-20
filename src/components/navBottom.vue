@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
 export default {
   props: {
     meun: {
@@ -22,14 +23,19 @@ export default {
           icon: 'home'
         },
         {
-          type: 'detection',
-          title: '检测',
-          icon: 'detection'
+          type: 'find',
+          title: '搜索',
+          icon: 'find'
         },
         {
-          type: 'found',
-          title: '发现',
-          icon: 'found'
+          type: 'dynamic',
+          title: '动态',
+          icon: 'dynamic'
+        },
+        {
+          type: 'news',
+          title: '消息',
+          icon: 'news'
         },
         {
           type: 'me',
@@ -42,6 +48,9 @@ export default {
   },
   computed: {
   },
+  created () {
+    console.log('this.meun',this.meun)
+  },
   methods: {
     onRouter (v) {
       switch (v) {
@@ -50,14 +59,19 @@ export default {
             name: 'index'
           })
           break
-        case 'detection':
+        case 'find':
           this.$router.push({
-            name: 'detection'
+            name: 'find'
           })
           break
-        case 'found':
+        case 'dynamic':
           this.$router.push({
-            name: 'forum'
+            name: 'dynamic'
+          })
+          break
+        case 'news':
+          this.$router.push({
+            name: 'news'
           })
           break
         case 'me':
@@ -93,38 +107,47 @@ export default {
     margin: 0 auto 10px;
 
     &.home {
-      background: url('~@/assets/img/creditImg/home@2x.png') no-repeat;
+      background: url('~@/assets/img/icon/home-b.png') no-repeat;
       background-size: contain;
 
       &.active {
-        background: url('~@/assets/img/creditImg/home-n@2x.png') no-repeat;
+        background: url('~@/assets/img/icon/home-a.png') no-repeat;
         background-size: contain;
       }
     }
-    &.detection {
-      background: url('~@/assets/img/creditImg/detection@2x.png') no-repeat;
+    &.find {
+      background: url('~@/assets/img/icon/find-b.png') no-repeat;
       background-size: contain;
 
       &.active {
-        background: url('~@/assets/img/creditImg/detection-n@2x.png') no-repeat;
+        background: url('~@/assets/img/icon/find-a.png') no-repeat;
         background-size: contain;
       }
     }
-    &.found {
-      background: url('~@/assets/img/creditImg/found@2x.png') no-repeat;
+    &.dynamic {
+      background: url('~@/assets/img/icon/dynamic-b.png') no-repeat;
       background-size: contain;
 
       &.active {
-        background: url('~@/assets/img/creditImg/found-n@2x.png') no-repeat;
+        background: url('~@/assets/img/icon/dynamic-a.png') no-repeat;
+        background-size: contain;
+      }
+    }
+    &.news {
+      background: url('~@/assets/img/icon/news-b.png') no-repeat;
+      background-size: contain;
+
+      &.active {
+        background: url('~@/assets/img/icon/news-a.png') no-repeat;
         background-size: contain;
       }
     }
     &.me {
-      background: url('~@/assets/img/creditImg/me@2x.png') no-repeat;
+      background: url('~@/assets/img/icon/me-b.png') no-repeat;
       background-size: contain;
 
       &.active {
-        background: url('~@/assets/img/creditImg/me-n@2x.png') no-repeat;
+        background: url('~@/assets/img/icon/me-a.png') no-repeat;
         background-size: contain;
       }
     }
@@ -132,10 +155,9 @@ export default {
 
   .nav_item {
     flex: 1;
-
-    .color {
-      color: @font-color-fd6255;
-    }
+    // .color {
+    //   color: @font-color-fd6255;
+    // }
   }
 }
 </style>

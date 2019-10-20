@@ -8,15 +8,29 @@ Vue.use(Router)
 const router = new Router({
   mode: 'history',
   fallback: true,
-  routes: [{
-    path: '/',
-    name: 'index',
-    component: _import('iframe/index')
-  }, {
-    path: '/success',
-    name: 'success',
-    component: _import('success/index')
-  }]
+  routes: [
+    {
+      path: '/',
+      name: 'index',
+      component: _import('iframe/index')
+    }, {
+      path: '/find',
+      name: 'find',
+      component: _import('find/index')
+    }, {
+      path: '/dynamic',
+      name: 'dynamic',
+      component: _import('dynamic/index')
+    }, {
+      path: '/news',
+      name: 'news',
+      component: _import('news/index')
+    }, {
+      path: '/me',
+      name: 'me',
+      component: _import('me/index')
+    }
+  ]
 })
 
 // router.beforeEach((to, from, next) => {
