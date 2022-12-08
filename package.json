@@ -20,7 +20,7 @@
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
     "px2rem-loader": "^0.1.9",
-    "qs": "^6.5.2",
+    "qs": "^6.5.3",
     "reset-css": "^4.0.1",
     "store": "^2.0.12",
     "svg-sprite-loader": "^4.1.6",
